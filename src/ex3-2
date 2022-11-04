@@ -1,0 +1,5 @@
+#!/bin/sh
+read num1 oper num2
+sol=$(expr $num1 $oper $num2)
+echo $sol
+exit 0

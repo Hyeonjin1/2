@@ -1,0 +1,4 @@
+#!/bin/sh
+t=$1
+eval grep $t ./DB.txt
+exit

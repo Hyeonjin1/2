@@ -1,0 +1,6 @@
+#!/bin/sh
+read x
+for i in $(seq $x)
+do
+	echo "Hello World"
+done

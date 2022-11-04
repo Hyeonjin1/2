@@ -1,0 +1,13 @@
+#!/bin/sh
+echo "리녹스가 재미있나요? (yes / no)"
+read answer
+case $answer in
+	yes|Y|YES)
+		echo "yes";;
+	no|nono|nonono|N|NO)
+		echo "no" ;;
+	*)
+		echo "yes or no로 입력해주세요."
+		exit 1;;
+esac
+exit 0

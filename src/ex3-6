@@ -1,0 +1,12 @@
+#!/bin/sh
+read t
+eval mkdir -p $t
+eval cd $t
+eval touch file0.txt
+eval touch file1.txt
+eval touch file2.txt
+eval touch file3.txt
+eval touch file4.txt
+eval tar -cvzf files.tar *
+eval cd 
+exit

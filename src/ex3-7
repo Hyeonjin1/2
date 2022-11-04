@@ -1,0 +1,14 @@
+#!/bin/sh
+t=$1
+eval mkdir -p ~/$t
+eval cd ~/$t
+eval touch file0.txt
+eval touch file1.txt
+eval touch file2.txt
+eval touch file3.txt
+eval touch file4.txt
+for i in 0 1 2 3 4 
+do
+eval mkdir -p file$i
+eval ln -s file$i.txt file$i
+done

@@ -1,0 +1,16 @@
+#!/bin/sh
+echo "몸무게를 입력하세요(kg) : "
+read weight
+echo "키를 입력하세요(cm) : "
+read height
+
+bmi=`echo "scale=2; $weight / (($height/100) * ($height/100))" | bc`
+
+echo "체질량 지수는 $bmi 입니다."
+
+if [ `echo "$bmi >= 18.5" | bc` -eq 1 ] && [ `echo "$bmi <= 23.0" | bc` -eq 1 ]
+then
+    echo "정상입니다."
+else
+    echo "비만입니다."
+fi
